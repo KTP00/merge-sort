@@ -1,4 +1,8 @@
-import { merge } from '../src/merge';
+import { merge } from '../src/index';
+
+beforeEach(() => {
+  jest.spyOn(console, 'log').mockImplementation(() => {}); // mute logs
+});
 
 describe('merge', () => {
   it('should merge and sort 3 collections correctly', () => {
